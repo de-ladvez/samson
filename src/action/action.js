@@ -3,7 +3,7 @@ export const SET_ITEM_CSV = "SET_ITEM_CSV";
 export const CHECK_TO_EMPTY_DATA_ITEM_CSV = "CHECK_TO_EMPTY_DATA_ITEM_CSV";
 export const UPDATE_DATA_FOR_CHARTS_ITEM_CSV = "UPDATE_DATA_FOR_CHARTS_ITEM_CSV";
 
-export function addCsvData(data) {
+export function updateDataForChartItemCsv(data) {
     return {
         type: UPDATE_DATA_FOR_CHARTS_ITEM_CSV,
         data
