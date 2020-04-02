@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 // import {
-//     setItemCsv
+//     setCurrentDataCsv
 // } from '../action/action';
 import Chart from "../components/chart/index";
 
@@ -8,7 +8,10 @@ const mapStateToProps = state => ({
     csvList: state.csvList
 });
 
+const mapDispatchToProps = dispatch => ({
+});
+
 export default connect(
     mapStateToProps,
-    {}
+    mapDispatchToProps
 )(Chart);

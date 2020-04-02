@@ -5,7 +5,7 @@ import configureStore from "./store/state";
 import { BrowserRouter } from 'react-router-dom';
 // import rootReducer from './reduser/reduser'
 import './index.css';
-import App from './components/App';
+import App from './container/App';
 
 
 const renderApp = preloadedState => {

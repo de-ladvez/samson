@@ -1,3 +1,28 @@
 .raphael-group-BepEtOra text {
     display: none;
 }
+
+.chart-row {
+    /*display: flex;*/
+
+}
+
+.charts {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.chart-bar {
+    padding: 15px 0;
+    width: 20%;
+    float: left;
+}
+
+.chart-bar div {
+    padding: 5px 15px;
+    border-top: 1px solid #000;
+}
+
+.chart-bar div:last-child {
+    border-bottom: 1px solid #000;
+}

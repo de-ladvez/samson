@@ -23,7 +23,7 @@ const Forms = ({
   function handleSendData() {
     checkToEmptyDataItemCsv().then(res => {
       updateDataForChartItemCsv();
-      history.push("/chart");
+      history.push("/show");
 
       for (let item of store.getState().csvList) {
         if (!item.active) {

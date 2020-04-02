@@ -1,27 +1,36 @@
 import React from 'react';
 import {
     Switch,
-    Route
+    Route,
+    Redirect
 } from "react-router-dom";
 // import Form from "./Form";
 import VisibleLoadCsv from "../container/VisibleLoadCsv"
-import Shows from "./shows/index";
-import OutputChart from "../container/OutputChart";
+import Shows from "../components/shows/index";
+// import OutputChart from "../container/OutputChart";
+import ComponentChart from "../components/chart/index";
 
-function App() {
+function App({csvList}) {
+
     return (
         <div className="App">
             <Switch>
                 <Route exact path="/">
-                    <VisibleLoadCsv/>
+                    {/*<VisibleLoadCsv/>*/}
                     {/*<Form/>*/}
-                </Route>
-                <Route exact path="/chart">
-                    <OutputChart/>
-                </Route>
-                <Route exact path="/show">
                     <Shows/>
+
                 </Route>
+                {!csvList[0].data.length ? <Redirect to="/" /> : (
+                    <>
+                        <Route exact path="/chart">
+                            <ComponentChart/>
+                        </Route>
+                        <Route exact path="/show">
+                            <Shows/>
+                        </Route>
+                    </>
+                )}
             </Switch>
         </div>
     );
