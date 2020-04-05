@@ -17,7 +17,6 @@ const MyChart = () => {
     const schemaFetch = [{
         "name": "Time",
         "type": "date",
-        // "format": "%d-%b-%y",
         "format": "%H:%M:%S:%L"
     }, {
         "name": "Type",

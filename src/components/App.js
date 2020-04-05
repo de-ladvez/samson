@@ -4,10 +4,8 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
-import Form from "./Form";
 import VisibleLoadCsv from "../container/VisibleLoadCsv"
 import Shows from "../components/shows/index";
-import OutputChart from "../container/OutputChart";
 import ComponentChart from "../components/chart/index";
 import ToShowChart from "./ToShowChart"
 

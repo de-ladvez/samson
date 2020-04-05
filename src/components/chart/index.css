@@ -2,11 +2,6 @@
     display: none;
 }
 
-.chart-row {
-    /*display: flex;*/
-
-}
-
 .charts {
     position: relative;
     padding-top: 15px;
