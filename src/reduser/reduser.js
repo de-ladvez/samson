@@ -16,7 +16,6 @@ const initialState = [
             ["time", "gfx"],
             ["time", "gfy"],
             ["time", "gfz"],
-            ["time", "gftotal"]
         ],
         dataChart: []
     },
@@ -45,7 +44,7 @@ const initialState = [
         dataChart: []
     },
     {
-        name: "gFobarometerrce",
+        name: "barometer",
         data: [],
         nameFile: "",
         active: 2,
@@ -59,7 +58,7 @@ const initialState = [
         data: [],
         nameFile: "",
         active: 2,
-        typeForChart: [["time", "latitude"], ["time", "longitude"]],
+        typeForChart: [["time", "latitude"], ["time", "longitude"], ["time", "speed__m_s_"]],
         dataChart: []
     }
 ];
@@ -67,6 +66,28 @@ const initialState = [
 function csvList(state = initialState, action) {
     switch (action && action.type) {
         case SET_ITEM_CSV:
+            let copy = [...state];
+            for(let item in action.data)  {
+                let copyItem = {...action.data[item]};
+                for(let list of copy){
+
+                    let el = {};
+                    for(let typeItem of list.typeForChart){
+                        el[typeItem[1]] = copyItem[typeItem[1]];
+                    };
+
+                    list.data.push({"time": copyItem.time, ...el});
+                    // i.data.push({...item[...type]})
+                }
+            };
+            return copy;
+            // state.map(item => {
+            //     debugger;
+            //     let obj = {};
+            //     for(let i of item.typeForChart) {
+            //         obj[i[1]];
+            //     }
+            // });
             return state.map(item =>
                 item.name === action.data.name ? action.data : item
             );
@@ -82,7 +103,8 @@ function csvList(state = initialState, action) {
                 let dataChart = item.data.map(csvCol => {
                     let acum = [];
                     for (let i of item.typeForChart) {
-                        acum.push([dateFormat(csvCol[i[0]],"yyyy-mm-dd HH.MM.ss.l") , i[1], csvCol[i[1]]]);
+                        // acum.push([dateFormat(csvCol[i[0]],"yyyy-mm-dd HH.MM.ss.l") , i[1], csvCol[i[1]]]);
+                        acum.push([csvCol[i[0]] , i[1], csvCol[i[1]]]);
                     }
                     return acum;
                 });
