@@ -3,11 +3,7 @@ import React, { Component, useEffect } from "react";
 
 import { connect } from 'react-redux'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import model from "./3dmodel.gltf";
-import ReactDOM from "react-dom";
 import * as THREE from "three";
-import dateFormat from "dateformat";
 
 
 class Show extends Component {
@@ -56,55 +52,27 @@ class Show extends Component {
 
     handlerRange = rn => {
         this.setState({count: rn.target.value});
-        // console.log(this.state.count);
 this.animate();
     };
 
     countMath = () => {
         let arr = this.csvList();
         let barometr = this.barometr();
-        let ax = arr[this.state.count].gfx * Math.sin(arr[this.state.count].gfx)
-        let ay = arr[this.state.count].gfx * Math.sin(arr[this.state.count].gfy)
-        let az = arr[this.state.count].gfx * Math.sin(arr[this.state.count].gfz)
 
-        // let x = Math.atan(
-        //     ax / Math.sqrt(Math.pow(ay, 2) + Math.pow(az, 2))
-        // );
-        // let y = Math.atan(
-        //     ay / Math.sqrt(Math.pow(ax, 2) + Math.pow(az, 2))
-        // );
-        // let z = Math.atan(
-        //     az / Math.sqrt(Math.pow(ay, 2) + Math.pow(ax, 2))
-        // );
         let x = 1.57 * arr[this.state.count].gfx;
         let y = 1.57 * arr[this.state.count].gfy;
         let z = 1.57 * arr[this.state.count].gfz;
-        // let x = ax;
-        // let y = ay;
-        // let z = az;
-        // let time = barometr[this.state.count].time.split(":").map(el => Number(el));
-        // let seconds = time[0]*60*60+time[1]*60+time[2];
         let top =  ((barometr[this.state.count].p - this.state.defaultP)*-1) * 1000;
 
         return {x,y,z,top};
     };
 
     animate = () => {
-        // requestAnimationFrame( this.animate );
         this.state.controls.update();
         const {x,y,z,top} = this.countMath();
         this.state.cube.rotation.x = x;
         this.state.cube.rotation.z =  y;
-
         this.state.cube.position.y = 10;
-
-
-
-        // console.log(`z - ${z}     x - ${x}    y - ${y}`);
-
-        // this.state.cube.rotation.z = z;
-        // this.state.cube.rotateZ(z);
-
         this.state.renderer.render( this.state.scene, this.state.camera );
     };
 
@@ -112,12 +80,6 @@ this.animate();
         this.state.renderer.setSize( 600, 500);
         this.mount.appendChild( this.state.renderer.domElement );
         this.state.scene.add(new THREE.GridHelper(600, 10));
-
-
-        // this.state.loader.load(model, function (obj) {
-            // var qwe = this.state.cube;
-            // this.state.scene.add( obj );
-        // });
         this.state.scene.add( this.state.cube );
         this.state.cube.add(this.state.borderColor);
         this.state.camera.position.set( 0, 80, 160 );

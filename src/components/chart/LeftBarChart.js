@@ -4,12 +4,8 @@ import {
     setCurrentDataCsv
 } from '../../action/action';
 
-const LeftBarChart = ({mapDispatchToProps}) => {
+const LeftBarChart = () => {
     const store = useStore();
-
-    const handlerSetCurrentDataCsv = item => {
-        store.dispatch(setCurrentDataCsv(item))
-    };
 
     return (
         <div className="chart-bar">
