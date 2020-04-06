@@ -14,7 +14,7 @@ class Show extends Component {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera( 75, 600/500, 0.1, 1000 );
         const controls = new  OrbitControls( camera, renderer.domElement );
-        const loader = new GLTFLoader();
+        // const loader = new GLTFLoader();
 
         const geometry = new THREE.BoxGeometry( 100, 10, 50 );
         const mat = new THREE.LineBasicMaterial( { color: 0xFFFFFF } );
@@ -34,7 +34,7 @@ class Show extends Component {
             material,
             borderColor,
             cube,
-            loader
+            // loader
         };
         this.handlerRange = this.handlerRange.bind(this)
     }
