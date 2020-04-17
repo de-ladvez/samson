@@ -4,7 +4,7 @@ import React, {Component, useEffect} from "react";
 import {connect} from 'react-redux'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import glbmodel from "./3d-obj4.glb";
+import glbmodel from "./3d_model_6m.glb";
 import * as THREE from "three";
 
 
@@ -48,9 +48,44 @@ class Show extends Component {
             cube,
             loader,
             loaderModel,
-            model: undefined
+            model: undefined,
+            interval: undefined,
+            alert: ""
         };
         this.handlerRange = this.handlerRange.bind(this)
+    };
+
+    setInterval = () => {
+        this.setState({
+            interval: setInterval(() => {
+                if (this.max() - 1 > this.state.count) {
+                    this.setState({count: this.state.count + 1});
+                    return;
+                }
+                clearInterval(this.state.interval);
+            }, this.countTime())
+        });
+    };
+    max = () => {
+        return this.csvList().length;
+    };
+    countTime = () => {
+        let data = this.csvList();
+        let dataLength = this.max();
+        let timeFirst = data[0].time.split(":");
+        let timeLast = data[dataLength - 1].time.split(":");
+        timeFirst =
+            timeFirst[0] * 3600000 +
+            timeFirst[1] * 60000 +
+            timeFirst[2] * 1000 +
+            timeFirst[3];
+        timeLast =
+            timeLast[0] * 3600000 +
+            timeLast[1] * 60000 +
+            timeLast[2] * 1000 +
+            timeLast[3];
+
+        return dataLength / (timeLast - timeFirst);
     };
 
     csvList = () => {
@@ -61,42 +96,34 @@ class Show extends Component {
         return this.props.csvList.csvList[3].data
     };
 
-    max = () => {
-        return this.csvList().length;
+    play = () => {
+        this.setInterval();
+    };
+
+    stop = () => {
+        clearInterval(this.state.interval);
+    };
+
+    alert = (match) => {
+        if(match.x > 0.8 || match.x < -0.8 || match.y > 0.8 || match.y < -0.8 ) {
+            this.setState({alert: "alert"});
+        } else {
+            this.setState({alert: ""});
+
+        }
     };
 
     handlerRange = rn => {
-        this.setState({count: rn.target.value});
-        this.animate();
+        this.setState({count: parseInt(rn.target.value)});
     };
-
-    // let loadSceneModel = new Promise((resolve, reject) => {
-    //     const stacy_mtl = new THREE.MeshPhongMaterial({
-    //         emissive: "yellow",
-    //     });
-    //     let loaderModel = new Promise((resolve, reject) => {
-    //
-    //     });
-    //     await
-    //     this.state.loader.load(glbmodel, (gltf) => {
-    //         this.setState({model: gltf.scene});
-    //         this.state.model.traverse(o => {
-    //             if (o.isMesh) {
-    //                 o.material = stacy_mtl;
-    //             }
-    //         });
-    //         // this.state.model.scale.set(1000, 1000, 100);
-    //         // this.state.model.position.z = -300;
-    //         this.state.scene.add(this.state.model);
-    //     }, undefined, function (error) {
-    //         console.error(error);
-    //     });
-    // };
 
     countMath = () => {
         let arr = this.csvList();
         let barometr = this.barometr();
 
+        if(!arr[this.state.count]) {
+            debugger
+        }
         let x = 1.57 * arr[this.state.count].gfx;
         let y = 1.57 * arr[this.state.count].gfy;
         let z = 1.57 * arr[this.state.count].gfz;
@@ -114,15 +141,16 @@ class Show extends Component {
         this.state.model.rotation.z = y;
         this.state.model.position.y = top;
 
-
-        // this.state.cube.rotation.x = x;
-        // this.state.cube.rotation.z =  y;
-        // this.state.cube.position.y = top;
-
-
         this.state.renderer.render(this.state.scene, this.state.camera);
         this.state.camera.position.set(0, 80, 100 + dist);
     };
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.count != prevState.count) {
+            this.animate();
+            this.alert(this.countMath());
+        }
+    }
 
     componentDidMount() {
         this.state.renderer.setSize(600, 500);
@@ -161,11 +189,15 @@ class Show extends Component {
             <>
                 <div ref={ref => (this.mount = ref)}/>
                 <div>
-                    <input type="range" min="0" max={this.max() - 1} step="1" onInput={this.handlerRange}/><br/>
+                    <input type="range" min="0" max={this.max() - 1} step="1" onInput={this.handlerRange}
+                           value={this.state.count}/><br/>
+                    <div onClick={this.play}>play</div>
+                    <div onClick={this.stop}>stop</div>
                     {/*<div>x: {x}</div>*/}
                     {/*<div>y: {z}</div>*/}
                     {/*<div>p: {p}</div>*/}
                     <div>meter: ~{(12 * top / 100).toFixed(2)}</div>
+                    <div>{this.state.alert}</div>
                     {/*<div>dist: {dist}</div>*/}
                 </div>
             </>

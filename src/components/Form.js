@@ -2,7 +2,7 @@ import React from "react";
 import {useStore} from "react-redux";
 
 import CSVReader from "react-csv-reader";
-import "./form.css";
+import loadFiles from "./form.css";
 import {useHistory} from "react-router-dom";
 
 const Forms = ({
@@ -35,18 +35,19 @@ const Forms = ({
     }
 
     return (
-        <div className="loadFiles-row">
+        <div className={loadFiles.row}>
 
-                <div className="loadFiles-item">
+                <div className={loadFiles.item}>
                     <CSVReader
                     label="Select 'csv' file with file data"
                     onFileLoaded={(data, fileInfo) =>
                     setItemCsv({...data})
                     }
                     parserOptions={papaparseOptions}
+                    defaultValue=""
                     />
                 </div>
-                <div className="loadFiles-button" onClick={handleSendData}>
+                <div className={loadFiles.button} onClick={handleSendData}>
                     Open charts and 3d vue
                 </div>
         </div>
