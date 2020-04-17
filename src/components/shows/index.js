@@ -6,7 +6,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 import glbmodel from "./3d_model_6m.glb";
 import * as THREE from "three";
-
+import show from "./index.scss";
 
 class Show extends Component {
     constructor(props) {
@@ -97,20 +97,19 @@ class Show extends Component {
     };
 
     play = () => {
+        clearInterval(this.state.interval);
         this.setInterval();
     };
 
     stop = () => {
         clearInterval(this.state.interval);
     };
-
+//TODO: ПЕРЕДЕЛАТЬ АЛЕРТЫ
     alert = (match) => {
-        if(match.x > 0.8 || match.x < -0.8 || match.y > 0.8 || match.y < -0.8 ) {
-            this.setState({alert: "alert"});
-        } else {
-            this.setState({alert: ""});
-
+        if (match.x > 0.8 || match.x < -0.8 || match.y > 0.8 || match.y < -0.8) {
+            return <div className={show.alert}>ALERT!!!</div>;
         }
+        return "";
     };
 
     handlerRange = rn => {
@@ -121,7 +120,7 @@ class Show extends Component {
         let arr = this.csvList();
         let barometr = this.barometr();
 
-        if(!arr[this.state.count]) {
+        if (!arr[this.state.count]) {
             debugger
         }
         let x = 1.57 * arr[this.state.count].gfx;
@@ -148,7 +147,6 @@ class Show extends Component {
     componentDidUpdate(prevProps, prevState) {
         if (this.state.count != prevState.count) {
             this.animate();
-            this.alert(this.countMath());
         }
     }
 
@@ -188,18 +186,17 @@ class Show extends Component {
         return (
             <>
                 <div ref={ref => (this.mount = ref)}/>
-                <div>
-                    <input type="range" min="0" max={this.max() - 1} step="1" onInput={this.handlerRange}
+                <div className={show.navigation}>
+                    <div className={show.play} onClick={this.play}></div>
+                    <div className={show.stop} onClick={this.stop}></div>
+                    <input className={show.track} type="range" min="0" max={this.max() - 1} step="1"
+                           onInput={this.handlerRange}
                            value={this.state.count}/><br/>
-                    <div onClick={this.play}>play</div>
-                    <div onClick={this.stop}>stop</div>
-                    {/*<div>x: {x}</div>*/}
-                    {/*<div>y: {z}</div>*/}
-                    {/*<div>p: {p}</div>*/}
-                    <div>meter: ~{(12 * top / 100).toFixed(2)}</div>
-                    <div>{this.state.alert}</div>
-                    {/*<div>dist: {dist}</div>*/}
                 </div>
+                <div>meter: ~{(12 * top / 100).toFixed(2)}</div>
+
+                {/* TODO: АЛЕРТЫ ПЕРЕДЕЛАТЬ*/}
+                {this.alert(this.countMath())}
             </>
         )
     }
