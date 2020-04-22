@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 import configureStore from "./store/state";
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+import {Provider as BusProvider} from "react-bus";
 // import rootReducer from './reduser/reduser'
 import './index.css';
 import App from './container/App';
@@ -17,7 +18,9 @@ const renderApp = preloadedState => {
     ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
-                <App />
+                <BusProvider>
+                    <App/>
+                </BusProvider>
             </BrowserRouter>
         </Provider>,
         document.getElementById('root')

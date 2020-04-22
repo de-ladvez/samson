@@ -1,29 +1,36 @@
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import {
-  setItemCsv,
-  checkToEmptyDataItemCsv,
-  updateDataForChartItemCsv
+    setItemCsv,
+    checkToEmptyDataItemCsv,
+    updateDataForChartItemCsv
 } from "../action/action";
+import {dendersMomentsNotification} from "../action/actionsNotif"
 import Form from "../components/Form";
+// let toast = useToast();
 
 const mapStateToProps = state => ({
-  csvList: state.csvList
+    csvList: state.csvList
 });
 
 const mapDispatchToProps = dispatch => ({
-  setItemCsv: data => dispatch(setItemCsv(data)),
-  checkToEmptyDataItemCsv: async () => {
-    try {
-      await dispatch(checkToEmptyDataItemCsv());
-      return "ok";
-    } catch (e) {
-      console.log("err ", e);
-    }
-  },
-  updateDataForChartItemCsv: () => dispatch(updateDataForChartItemCsv())
+    setItemCsv: data => {
+        dispatch(setItemCsv(data));
+        dispatch(dendersMomentsNotification(data));
+        // checkToals("dengersMoments");
+        // toast.add("alert")
+    },
+    checkToEmptyDataItemCsv: async () => {
+        try {
+            await dispatch(checkToEmptyDataItemCsv());
+            return "ok";
+        } catch (e) {
+            console.log("err ", e);
+        }
+    },
+    updateDataForChartItemCsv: () => dispatch(updateDataForChartItemCsv())
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Form);

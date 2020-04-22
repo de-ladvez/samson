@@ -1,6 +1,5 @@
-import React, {Component, useEffect} from "react";
-// import {useStore} from "react-redux";
-
+import React, {useEffect, useState, useRef} from "react";
+import { useListener } from 'react-bus';
 import {connect} from 'react-redux'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
@@ -8,70 +7,53 @@ import glbmodel from "./3d_model_6m.glb";
 import * as THREE from "three";
 import show from "./index.scss";
 
-class Show extends Component {
-    constructor(props) {
-        super(props);
+let intervalCont = undefined;
+let model = undefined;
+let countDbl = 0;
+let defaultP = 0;
+const renderer = new THREE.WebGLRenderer({antialias: true});
+const camera = new THREE.PerspectiveCamera(75, 600 / 500, 0.1, 1000)
+const controls = new OrbitControls(camera, renderer.domElement);
+const scene = new THREE.Scene();
+const loader = new GLTFLoader();
+const loaderModel = new Promise((resolve, reject) => {
+    loader.load(glbmodel, (gltf) => {
+        resolve(gltf);
+    }, undefined, error => {
+        console.log(error);
+        reject(error);
+    });
+});
 
-        const renderer = new THREE.WebGLRenderer({antialias: true});
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 600 / 500, 0.1, 1000);
-        const controls = new OrbitControls(camera, renderer.domElement);
-        const loader = new GLTFLoader();
+const Show = ({csvList}) => {
+    const canvas = useRef(null);
+    const range = useRef(null);
+    let [height, setHeight] = useState(0);
+    let [time, setTime] = useState(0);
+    let [count, setCount] = useState(0);
+    // const [defaultP, setDefaultP] = useState(0);
+    // const [matchInterval, setMatchInterval] = useState(undefined);
 
-        const geometry = new THREE.BoxGeometry(100, 10, 50);
-        const mat = new THREE.LineBasicMaterial({color: 0xFFFFFF});
-        const material = new THREE.MeshBasicMaterial({color: "aqua", wireframe: true});
-        const borderColor = new THREE.LineSegments(geometry, mat);
-        const cube = new THREE.Mesh(geometry, material);
-
-        let loaderModel = new Promise((resolve, reject) => {
-            loader.load(glbmodel, (gltf) => {
-                resolve(gltf);
-            }, undefined, error => {
-                console.log(error);
-                reject(error);
-            });
-        });
-
-
-        this.state = {
-            count: 0,
-            defaultP: 0,
-            renderer,
-            scene,
-            camera,
-            controls,
-            geometry,
-            mat,
-            material,
-            borderColor,
-            cube,
-            loader,
-            loaderModel,
-            model: undefined,
-            interval: undefined,
-            alert: ""
-        };
-        this.handlerRange = this.handlerRange.bind(this)
+    const csvListData = () => {
+        return csvList[0].data
     };
 
-    setInterval = () => {
-        this.setState({
-            interval: setInterval(() => {
-                if (this.max() - 1 > this.state.count) {
-                    this.setState({count: this.state.count + 1});
-                    return;
-                }
-                clearInterval(this.state.interval);
-            }, this.countTime())
-        });
+    const barometr = () => {
+        return csvList[3].data
     };
-    max = () => {
-        return this.csvList().length;
+
+    const max = () => {
+        return csvListData().length;
     };
-    countTime = () => {
-        let data = this.csvList();
-        let dataLength = this.max();
+
+    const handlerChangeCount = (res) => {
+        countDbl = res;
+        setCount(countDbl);
+    };
+
+    const countTime = () => {
+        let data = csvListData();
+        let dataLength = max();
         let timeFirst = data[0].time.split(":");
         let timeLast = data[dataLength - 1].time.split(":");
         timeFirst =
@@ -88,130 +70,119 @@ class Show extends Component {
         return dataLength / (timeLast - timeFirst);
     };
 
-    csvList = () => {
-        return this.props.csvList.csvList[0].data
+    const initInterval = () => {
+        intervalCont =  setInterval(() => {
+            if (max() - 1 > countDbl) {
+                setCount(countDbl++);
+                return;
+            }
+            clearInterval(intervalCont);
+        }, countTime());
     };
 
-    barometr = () => {
-        return this.props.csvList.csvList[3].data
+
+    const play = () => {
+        clearInterval(intervalCont);
+        initInterval();
     };
 
-    play = () => {
-        clearInterval(this.state.interval);
-        this.setInterval();
+    const stop = () => {
+        clearInterval(intervalCont);
     };
 
-    stop = () => {
-        clearInterval(this.state.interval);
+    const handlerRange = rn => {
+        countDbl = parseInt(rn.target.value);
+        setCount(countDbl);
     };
-//TODO: ПЕРЕДЕЛАТЬ АЛЕРТЫ
-    alert = (match) => {
-        if (match.x > 0.8 || match.x < -0.8 || match.y > 0.8 || match.y < -0.8) {
-            return <div className={show.alert}>ALERT!!!</div>;
+
+    const countMath = () => {
+        let arr = csvListData();
+
+        let x = 1.57 * arr[count].gfx;
+        let y = 1.57 * arr[count].gfy;
+        let z = 1.57 * arr[count].gfz;
+        let p = barometr()[count].p;
+        let top = ((defaultP - p) * 100);
+
+        setHeight(top);
+        setTime(arr[count].time);
+        let dist = 160;
+        if(camera) {
+
+            dist = 100 / (2 * Math.tan(camera.fov * Math.PI / 360));
         }
-        return "";
-    };
-
-    handlerRange = rn => {
-        this.setState({count: parseInt(rn.target.value)});
-    };
-
-    countMath = () => {
-        let arr = this.csvList();
-        let barometr = this.barometr();
-
-        if (!arr[this.state.count]) {
-            debugger
-        }
-        let x = 1.57 * arr[this.state.count].gfx;
-        let y = 1.57 * arr[this.state.count].gfy;
-        let z = 1.57 * arr[this.state.count].gfz;
-        let p = barometr[this.state.count].p;
-        let top = ((this.state.defaultP - p) * 100);
-        let dist = 100 / (2 * Math.tan(this.state.camera.fov * Math.PI / 360));
 
         return {x, y, z, top, dist, p};
     };
 
-    animate = () => {
-        this.state.controls.update();
-        const {x, y, z, top, dist} = this.countMath();
-        this.state.model.rotation.x = x;
-        this.state.model.rotation.z = y;
-        this.state.model.position.y = top;
-
-        this.state.renderer.render(this.state.scene, this.state.camera);
-        this.state.camera.position.set(0, 80, 100 + dist);
+    const animate = () => {
+        controls.update();
+        const {x, y, z, top, dist} = countMath();
+        // range.current.value = count;
+        if(model) {
+            model.rotation.x = x;
+            model.rotation.z = y;
+            model.position.y = top;
+        }
+        renderer.render(scene, camera);
+        camera.position.set(x, 80, 100 + dist);
     };
 
-    componentDidUpdate(prevProps, prevState) {
-        if (this.state.count != prevState.count) {
-            this.animate();
-        }
-    }
+    useEffect(() => {
+            animate();
+    }, [count]);
 
-    componentDidMount() {
-        this.state.renderer.setSize(600, 500);
-        this.mount.appendChild(this.state.renderer.domElement);
-        this.state.scene.add(new THREE.GridHelper(600, 100));
+    useEffect(() => {
 
-        // this.state.scene.add( this.state.cube );
-        // this.state.cube.add(this.state.borderColor);
-        this.state.camera.position.set(0, 80, 100);
 
-        // this.setState({defaultP:  0});
-        this.setState({defaultP: this.barometr()[10].p});
-        // this.state.renderer.render( this.state.scene, this.state.camera );
-
+        renderer.setSize(600, 500);
+        canvas.current.appendChild(renderer.domElement);
+        scene.add(new THREE.GridHelper(600, 100));
+        camera.position.set(0, 80, 100);
+        defaultP = barometr()[10].p;
         const stacy_mtl = new THREE.MeshPhongMaterial({
             emissive: "yellow",
         });
-        this.state.loaderModel.then(async res => {
-            this.setState({model: res.scene});
+        loaderModel.then(res => {
+             model = res.scene;
+
             res.scene.traverse(o => {
                 if (o.isMesh) {
                     o.material = stacy_mtl;
                 }
             });
-            await this.state.scene.add(this.state.model);
-            this.animate();
+             scene.add(res.scene);
+            animate();
         });
-        // this.loadSceneModel().then(() => {
-        //
-        // });
-    }
 
-    render() {
-        let {x, y, z, top, dist, p} = this.countMath();
-        return (
-            <>
-                <div ref={ref => (this.mount = ref)}/>
-                <div className={show.navigation}>
-                    <div className={show.play} onClick={this.play}></div>
-                    <div className={show.stop} onClick={this.stop}></div>
-                    <input className={show.track} type="range" min="0" max={this.max() - 1} step="1"
-                           onInput={this.handlerRange}
-                           value={this.state.count}/><br/>
-                </div>
-                <div>meter: ~{(12 * top / 100).toFixed(2)}</div>
+    }, []) ;
 
-                {/* TODO: АЛЕРТЫ ПЕРЕДЕЛАТЬ*/}
-                {this.alert(this.countMath())}
-            </>
-        )
-    }
-}
+    useListener("handlerChangeCount", handlerChangeCount);
 
+    //
+    // let {x, y, z, top, dist, p} = this.countMath();
+    return (
+        <div>
+            <div ref={canvas}></div>
+            <div className={show.navigation}>
+                <div className={show.play} onClick={play}></div>
+                <div className={show.stop} onClick={stop}></div>
+                <input className={show.track} ref={range} type="range" min="0" max={max() - 1} step="1"
+                       onChange={handlerRange}
+                       value={count}/>
+                <div>time: {time} </div>
+            </div>
+            <div>Height: ~{(12 * height / 100).toFixed(2)} m</div>
+        </div>
+    )
+};
 
-const
-    mapStateToProps = state => ({
-        csvList: state
+const mapStateToProps = state => ({
+        csvList: state.csvList,
     });
 
 
-export default connect(mapStateToProps)
-
-(
-    Show
-)
-;
+export default connect(
+    mapStateToProps,
+    []
+)(Show);

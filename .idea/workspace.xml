@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58d7e0d5-60b2-43e6-a183-e512e46d2ebb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/getHttpsConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/cssTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jest/fileTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/modules.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/pnpTs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shows/index.scss" afterDir="false" />
+    <list default="true" id="58d7e0d5-60b2-43e6-a183-e512e46d2ebb" name="Default" comment="add no">
+      <change afterPath="$PROJECT_DIR$/src/action/actionsNotif.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/notif/Notification.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/notif/Notificaton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/notif/controllersToals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/notif/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reduser/reducerCsvList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reduser/reduserNotif.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shows/index.copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/index.copy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shows/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shows/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/VisibleLoadCsv.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/VisibleLoadCsv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reduser/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduser/reduser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,83 +48,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/shows/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
-              <folding>
-                <element signature="e#93#128#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2640">
+              <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Form.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Form.js">
+      <file leaf-file-name="actionsNotif.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/action/actionsNotif.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/form.css">
+      <file leaf-file-name="reduserNotif.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reduser/reduserNotif.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/shows/index.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="976">
-              <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.copy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/shows/index.copy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="94" column="4" selection-start-line="65" selection-start-column="2" selection-end-line="94" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/chart/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1020">
-              <caret line="457" column="51" selection-start-line="457" selection-start-column="47" selection-end-line="457" selection-end-column="51" />
+            <state relative-caret-position="64">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -132,8 +78,71 @@
       <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/state.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="368">
+              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Notification.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/notif/Notification.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-248">
+              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Notificaton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/notif/Notificaton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisibleLoadCsv.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/VisibleLoadCsv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,13 +153,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>useState</find>
-      <find>store</find>
       <find>LeftBarChart</find>
       <find>csvList</find>
       <find>MyChart</find>
@@ -165,6 +173,22 @@
       <find>localIdentName</find>
       <find>scss</find>
       <find>alert</find>
+      <find>dateFormat</find>
+      <find>combineReducers</find>
+      <find>useS</find>
+      <find>./store/state</find>
+      <find>handlerChangeCount</find>
+      <find>mount</find>
+      <find>setMat</find>
+      <find>csvList()</find>
+      <find>setModel</find>
+      <find>model</find>
+      <find>handlerRange</find>
+      <find>setC</find>
+      <find>defaultP</find>
+      <find>matchInterval</find>
+      <find>count</find>
+      <find>coun</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,20 +203,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/container/VisibleLoadCsv.js" />
-        <option value="$PROJECT_DIR$/src/action/action.js" />
         <option value="$PROJECT_DIR$/src/container/OutputChart.js" />
         <option value="$PROJECT_DIR$/src/container/App.js" />
         <option value="$PROJECT_DIR$/src/components/form/index.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/reduser/reduser.js" />
         <option value="$PROJECT_DIR$/src/components/ToShowChart.js" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/chart/index.css" />
-        <option value="$PROJECT_DIR$/src/components/chart/index.js" />
         <option value="$PROJECT_DIR$/src/components/chart/LeftBarChart.js" />
-        <option value="$PROJECT_DIR$/src/store/state.js" />
-        <option value="$PROJECT_DIR$/src/components/Form.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/config/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/components/form.css" />
@@ -200,7 +216,30 @@
         <option value="$PROJECT_DIR$/src/components/shows/index.sass" />
         <option value="$PROJECT_DIR$/src/components/shows/asd.scss" />
         <option value="$PROJECT_DIR$/src/components/shows/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/alerts/Alerts.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/contextNotif.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/withToastProvider.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/Toast.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/useToast.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/index.js" />
+        <option value="$PROJECT_DIR$/src/reduser/reducerCsvList.js" />
+        <option value="$PROJECT_DIR$/src/reduser/reduser.js" />
+        <option value="$PROJECT_DIR$/src/components/chart/index.js" />
+        <option value="$PROJECT_DIR$/src/action/action.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/Notifsicaton.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/Notification.css" />
+        <option value="$PROJECT_DIR$/src/components/notif/controllersToals.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/shows/index.copy.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
+        <option value="$PROJECT_DIR$/src/container/VisibleLoadCsv.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/Notificaton.js" />
         <option value="$PROJECT_DIR$/src/components/shows/index.js" />
+        <option value="$PROJECT_DIR$/src/store/state.js" />
+        <option value="$PROJECT_DIR$/src/components/notif/Notification.scss" />
+        <option value="$PROJECT_DIR$/src/reduser/reduserNotif.js" />
+        <option value="$PROJECT_DIR$/src/action/actionsNotif.js" />
       </list>
     </option>
   </component>
@@ -229,7 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,12 +278,13 @@
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
               <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
               <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="action" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +304,26 @@
               <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="notif" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="samson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="shows" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="samson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="container" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="samson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reduser" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
@@ -273,16 +331,24 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="store" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="samson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="util" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="Default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -378,7 +444,15 @@
       <workItem from="1587070119215" duration="1835000" />
       <workItem from="1587123294659" duration="9003000" />
       <workItem from="1587135569580" duration="5838000" />
-      <workItem from="1587143069407" duration="4269000" />
+      <workItem from="1587143069407" duration="5681000" />
+      <workItem from="1587291565550" duration="3614000" />
+      <workItem from="1587302407171" duration="14722000" />
+      <workItem from="1587392643005" duration="23626000" />
+      <workItem from="1587474265880" duration="25324000" />
+      <workItem from="1587503133517" duration="9000" />
+      <workItem from="1587555366378" duration="90000" />
+      <workItem from="1587556050281" duration="13394000" />
+      <workItem from="1587580544839" duration="1159000" />
     </task>
     <task id="LOCAL-00001" summary="create">
       <created>1585590227475</created>
@@ -443,11 +517,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587138387696</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add litle css">
+      <created>1587147450746</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587147450746</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153312000" />
+    <option name="totallyTimeSpent" value="236662000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -458,46 +539,48 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.18440185" />
       <window_info anchor="bottom" content_ui="combo" x="24" y="550" width="1490" height="231" id="TODO" order="5" type="FLOATING" weight="0.32905984" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Database" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49932885" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32905984" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.3258427" />
-      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database" order="9" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49932885" visible="true" weight="0.32763532" />
       <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.3261745" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.328125" />
       <window_info id="Favorites" order="2" sideWeight="0.50073636" side_tool="true" weight="0.3258427" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.32905984" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3261745" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.18440185" />
+      <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.3261745" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" content_ui="combo" x="24" y="550" width="1490" height="231" id="TODO" order="5" type="FLOATING" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49932885" weight="0.328125" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Database" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.328125" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32905984" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32905984" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info id="Favorites" order="2" sideWeight="0.50073636" side_tool="true" weight="0.3258427" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +598,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="3d model + height" />
     <MESSAGE value="update 3d model and add button play and stop" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 3d model and add button play and stop" />
+    <MESSAGE value="add litle css" />
+    <option name="LAST_COMMIT_MESSAGE" value="add litle css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,86 +607,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/shows/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/VisibleLoadCsv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="16" column="48" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="2064">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
@@ -653,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,106 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/3 m model- with bottom holes.obj" />
     <entry file="file://$PROJECT_DIR$/public/3d_model.obj" />
     <entry file="file://$PROJECT_DIR$/src/components/shows/3d_model.obj" />
-    <entry file="file://$PROJECT_DIR$/src/reduser/reduser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/VisibleLoadCsv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/container/OutputChart.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/ToShowChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/LeftBarChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/serve-index/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/chart/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shows/index.copy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="94" column="4" selection-start-line="65" selection-start-column="2" selection-end-line="94" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -824,49 +733,189 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
+        <state relative-caret-position="7312">
           <caret line="457" column="51" selection-start-line="457" selection-start-column="47" selection-end-line="457" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shows/index.sass">
+    <entry file="file://$PROJECT_DIR$/src/components/shows/index.sass" />
+    <entry file="file://$PROJECT_DIR$/src/components/shows/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="976">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/notif/context.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/notif/withToastProvider.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/notif/useToast.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/notif/Toast.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/notif/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reduser/reduser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ToShowChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reduser/reducerCsvList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chart/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chart/LeftBarChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/chart/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+        <state relative-caret-position="16">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/notif/controllersToals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shows/index.copy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3392">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+          <folding>
+            <element signature="e#93#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form.css">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+        <state relative-caret-position="224">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shows/index.scss">
+    <entry file="file://$PROJECT_DIR$/src/container/VisibleLoadCsv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="976">
-          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        <state relative-caret-position="112">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/notif/Notificaton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/shows/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="e#93#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2640">
+          <caret line="172" column="32" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/notif/Notification.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reduser/reduserNotif.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/actionsNotif.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {useStore} from "react-redux";
-
 import FusionCharts from "fusioncharts";
 import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 import ReactFC from "react-fusioncharts";
-// import LeftBarChart from "./LeftBarChart";
 import "./index.css";
-// import {setCurrentDataCsv} from "../../action/action";
 
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 

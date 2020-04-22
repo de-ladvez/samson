@@ -1,6 +1,5 @@
 import React from "react";
 import {useStore} from "react-redux";
-
 import CSVReader from "react-csv-reader";
 import loadFiles from "./form.css";
 import {useHistory} from "react-router-dom";
