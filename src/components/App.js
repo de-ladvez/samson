@@ -7,12 +7,17 @@ import {
 import VisibleLoadCsv from "../container/VisibleLoadCsv"
 import Shows from "../components/shows/index";
 import ComponentChart from "../components/chart/index";
-import ToShowChart from "./ToShowChart"
+import ToShowChart from "./ToShowChart";
+import Notification from "./notif/Notificaton";
 
 function App({csvList}) {
 
     return (
         <div className="App">
+            {/*<div>*/}
+            {/*</div>*/}
+
+            <Notification/>
             <Switch>
                 <Route exact path="/">
                     <VisibleLoadCsv/>

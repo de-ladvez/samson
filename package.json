@@ -55,6 +55,7 @@
     "react": "^16.13.1",
     "react-apexcharts": "1.3.6",
     "react-app-polyfill": "^1.0.6",
+    "react-bus": "^2.0.1",
     "react-charts": "^2.0.0-beta.6",
     "react-csv-reader": "3.0.4",
     "react-dev-utils": "^10.2.1",

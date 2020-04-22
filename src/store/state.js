@@ -15,6 +15,10 @@ import {createStore, compose, applyMiddleware} from "redux";
 import thunkMiddleware from 'redux-thunk';
 import reducerApp from "../reduser/reduser";
 
+// const setStore = store => next => action => {
+//     return store.getState();
+// };
+
 // const logger = store => next => action => {
 //     console.group(action.type);
 //     console.info('dispatching', action);
@@ -43,6 +47,7 @@ const configureStore = function () {
         compose(
             applyMiddleware(
                 thunkMiddleware,
+                // setStore
                 // vanillaPromise,
                 // logger
             ),
