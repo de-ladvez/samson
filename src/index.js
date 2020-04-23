@@ -4,9 +4,9 @@ import {Provider} from 'react-redux'
 import configureStore from "./store/state";
 import {BrowserRouter} from 'react-router-dom';
 import {Provider as BusProvider} from "react-bus";
-// import rootReducer from './reduser/reduser'
 import './index.css';
-import App from './container/App';
+import ScreensRoot from './screen/root';
+import Header from "./components/Header/Header"
 
 
 const renderApp = preloadedState => {
@@ -19,7 +19,8 @@ const renderApp = preloadedState => {
         <Provider store={store}>
             <BrowserRouter>
                 <BusProvider>
-                    <App/>
+                    <Header/>
+                    <ScreensRoot/>
                 </BusProvider>
             </BrowserRouter>
         </Provider>,

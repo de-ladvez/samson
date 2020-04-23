@@ -1,0 +1,33 @@
+.raphael-group-BepEtOra text {
+    display: none;
+}
+
+.charts {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.bar {
+    padding: 15px 0;
+    width: 20%;
+    float: left;
+    position: relative;
+    z-index: 999;
+
+    div {
+        padding: 5px 15px;
+        cursor: pointer;
+        border-top: 1px solid #000;
+    }
+
+    div:hover {
+        background: #282c34;
+        color: #fff;
+    }
+
+    div:last-child {
+        border-bottom: 1px solid #000;
+    }
+
+}
+

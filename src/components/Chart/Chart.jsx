@@ -3,7 +3,7 @@ import {useStore} from "react-redux";
 import FusionCharts from "fusioncharts";
 import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 import ReactFC from "react-fusioncharts";
-import "./index.css";
+import style from"./Chart.scss";
 
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
@@ -80,11 +80,11 @@ const MyChart = () => {
 
 
     return (
-        <div className="chart-row">
-            <div className="chart-bar">
+        <div >
+            <div className={style.bar}>
                 {csvList.map((item, index) => <div key={index} onClick={() => {onFetchData(index)}}>{item.name}</div>)}
             </div>
-            <ReactFC {...timeseriesDs} className="charts" />
+            <ReactFC {...timeseriesDs} className={style.charts}/>
         </div>
     );
 };

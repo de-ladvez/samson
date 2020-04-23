@@ -2,17 +2,17 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
-import "./form.css";
+import style from "./TopBar.scss";
 
 
-function ToShowChart() {
+function TopBar() {
 
     return (
-        <div className="links">
+        <div className={style.links}>
             <Link to="/chart">chart</Link>
             <Link to="/show">show</Link>
         </div>
     );
 }
 
-export default ToShowChart;
+export default TopBar;
