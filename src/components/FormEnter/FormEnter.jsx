@@ -1,17 +1,22 @@
 import React from "react";
-import {useStore} from "react-redux";
+import { connect} from "react-redux";
+import {
+    setItemCsv,
+    checkToEmptyDataItemCsv,
+    updateDataForChartItemCsv
+} from "../../action/action";
+import {dendersMomentsNotification} from "../../action/actionsNotif";
 import CSVReader from "react-csv-reader";
-import loadFiles from "./form.css";
+import loadFiles from "./FormEnter.css";
 import {useHistory} from "react-router-dom";
 
-const Forms = ({
+const FormEnter = ({
                    csvList,
                    setItemCsv,
                    checkToEmptyDataItemCsv,
                    updateDataForChartItemCsv
                }) => {
     let history = useHistory();
-    const store = useStore();
     const papaparseOptions = {
         header: true,
         dynamicTyping: true,
@@ -24,7 +29,7 @@ const Forms = ({
             updateDataForChartItemCsv();
             history.push("/show");
 
-            for (let item of store.getState().csvList) {
+            for (let item of csvList) {
                 if (!item.active) {
                     return;
                 }
@@ -53,4 +58,29 @@ const Forms = ({
     );
 };
 
-export default Forms;
+const mapStateToProps = state => ({
+    csvList: state.csvList
+});
+
+const mapDispatchToProps = dispatch => ({
+    setItemCsv: data => {
+        dispatch(setItemCsv(data));
+        dispatch(dendersMomentsNotification(data));
+        // checkToals("dengersMoments");
+        // toast.add("alert")
+    },
+    checkToEmptyDataItemCsv: async () => {
+        try {
+            await dispatch(checkToEmptyDataItemCsv());
+            return "ok";
+        } catch (e) {
+            console.log("err ", e);
+        }
+    },
+    updateDataForChartItemCsv: () => dispatch(updateDataForChartItemCsv())
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(FormEnter);

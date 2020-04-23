@@ -1,0 +1,18 @@
+.links {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.links > * {
+  width: 300px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 10px;
+  border: 1px solid #282c34;
+  border-radius: 4px;
+  display: inline-block;
+  background: rgba(51, 51, 51, 0.2);
+}

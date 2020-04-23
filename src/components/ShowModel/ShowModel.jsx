@@ -3,9 +3,9 @@ import { useListener } from 'react-bus';
 import {connect} from 'react-redux'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import glbmodel from "./3d_model_6m.glb";
+import glbmodel from "./models/3d_model_6m.glb";
 import * as THREE from "three";
-import show from "./index.scss";
+import show from "./ShowModel.scss";
 
 let intervalCont = undefined;
 let model = undefined;
