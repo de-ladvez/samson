@@ -1,8 +1,8 @@
 import {connect} from "react-redux";
 import {useBus} from "react-bus";
 import React, {useState} from "react";
-import { useLocation } from 'react-router-dom'
-import style from "./Notification.scss"
+import { useLocation } from 'react-router-dom';
+import style from "./Notification.scss";
 
 const mapStateToProps = state => ({
     notification: state.notification
