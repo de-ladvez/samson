@@ -9,6 +9,7 @@ import { Redirect, Route, withRouter } from "react-router-dom";
 const rout = ({path, component: Component}) => (
 
 );
+
 const Auth = ({ loggedIn, path, component: Component }) => (
     <Route
         path={path}
