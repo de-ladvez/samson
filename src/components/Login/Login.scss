@@ -1,0 +1,32 @@
+.input {
+  height: 40px!important;
+  margin: 10px 0;
+}
+
+.row {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+}
+
+.image {
+  width: 100%;
+  max-width: 265px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}
+
+.button {
+  height: 40px;
+  font-size: 14px;
+  margin-top: 20px;
+}

@@ -19,7 +19,7 @@ const renderApp = preloadedState => {
         <Provider store={store}>
             <BrowserRouter>
                 <BusProvider>
-                    <Header/>
+                    {/*<Header/>*/}
                     <ScreensRoot/>
                 </BusProvider>
             </BrowserRouter>

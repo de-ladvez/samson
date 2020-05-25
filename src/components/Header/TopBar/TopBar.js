@@ -11,6 +11,7 @@ function TopBar() {
         <div className={style.links}>
             <Link to="/chart">chart</Link>
             <Link to="/show">show</Link>
+            <Link to="/starcom">starcom</Link>
         </div>
     );
 }

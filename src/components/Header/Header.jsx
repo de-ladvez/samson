@@ -8,16 +8,18 @@ const Header = () => {
 
     const HandlerTopBar = () => {
         if(location.pathname !== "/") {
-            return <TopBar/>
+            return (
+                <div>
+                    <TopBar/>
+                    <Notification/>
+                </div>
+            )
         }
         return "";
     };
 
     return (
-        <div>
-            <HandlerTopBar/>
-            <Notification/>
-        </div>
+        <HandlerTopBar/>
     );
 };
 
