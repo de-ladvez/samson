@@ -8,7 +8,7 @@ const LeftPanel = (props) => {
     return (
         <div className={leftPanel.row}>
             <Link to="/sort">Sorting</Link>
-            <Link to="/sort">Sorting</Link>
+            <Link to="/addmaterial">Add material</Link>
             <Link to="/sort">Sorting</Link>
             <Link to="/sort">Sorting</Link>
         </div>
