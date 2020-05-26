@@ -9,7 +9,6 @@ function notification(state = [], action) {
 
     switch (action && action.type) {
         case DANGERES_MOMENTS_NOTIFICATION:
-            // debugger
             // let copy = [...ddaction.data];
             let acumx = []
             let acumy = []

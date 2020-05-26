@@ -1,33 +1,56 @@
 import React from "react";
-import { connect } from "react-redux";
-import { Redirect, Route, withRouter } from "react-router-dom";
+import {connect} from "react-redux";
+import {Redirect, Route, withRouter} from "react-router-dom";
+import DefaultLayout from "../layouts/Default"
 
-// const mapStateToProps = ({ session: { userId} }) => ({
-//     loggedIn: Boolean(userId)
-// });
+const mapStateToProps = ({session: {userId}}) => ({
+    loggedIn: Boolean(userId)
+});
 
-const rout = ({path, component: Component}) => (
+export const RouteWrapper = ({
+                          component: Component,
+                          layout: Layout,
+                          ...rest
+                      }) => {
+    return (
+        <Route {...rest} render={(props) =>
+            <Layout {...props}>
+                <Component {...props} />
+            </Layout>
+        }/>
+    );
+}
+// const rout = ({path, component: Component}) => (
+//
+// );
 
-);
+// const DefaultLayoutRoute = ({path, component: Component}) => (
+//     <Route
+//         path={path}
+//         render = {props => (
+//
+//         )}
+//         />
+// );
 
-const Auth = ({ loggedIn, path, component: Component }) => (
+const Auth = ({loggedIn, path, component: Component}) => (
     <Route
         path={path}
         render={props => (
             loggedIn ?
-                <Redirect to='/dashboard' /> :
+                <Redirect to='/dashboard'/> :
                 <Component {...props} />
         )}
     />
 );
 
-const Protected = ({ loggedIn, path, component: Component }) => (
+const Protected = ({loggedIn, path, component: Component}) => (
     <Route
         path={path}
         render={props => (
             loggedIn ?
                 <Component {...props} /> :
-                <Redirect to='/login' />
+                <Redirect to='/login'/>
         )}
     />
 );

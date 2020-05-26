@@ -46,7 +46,6 @@ const Table = () => {
 //     for (let i in params) {
 //         queryParams = queryParams + `&${i}=${params[i]}`;
 //     }
-//     debugger
 //     return `/mongol-api?commandname=${query}&user=devsamson&pass=devsamson01&format=json${queryParams}`;
 // };
 //
@@ -57,7 +56,6 @@ const Table = () => {
 //         let data = [];
 //         const TWO_WEACKS = 14000000;
 //
-//         debugger
 //         axios({
 //             method: "get",
 //             url: matchUrl("get_units"),
@@ -81,7 +79,6 @@ const Table = () => {
 //                             end: localEnd
 //                         })
 //                     }).then(res => {
-//                         debugger
 //                         data[1].data = [...data[1].data, ...res];
 //                         if(localEnd < end) {
 //                             localEnd = end;
