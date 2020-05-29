@@ -11,7 +11,7 @@ export default function DefaultLayout({children}) {
             <div>
                 <LeftPanel/>
             </div>
-            <div>
+            <div className={deflayout.container}>
                 {children}
             </div>
 

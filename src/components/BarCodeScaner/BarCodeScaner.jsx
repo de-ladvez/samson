@@ -1,17 +1,20 @@
 import React, {useEffect, useState} from "react";
-import barCodeScaner from "./BarCodeScaner.scss"
+import style from "./BarCodeScaner.scss"
 import {BrowserMultiFormatReader, NotFoundException} from "@zxing/library"
 
 const BarCodeScaner = (props) => {
     const codeReader = new BrowserMultiFormatReader();
     const [deviceName, setDeviceName] = useState();
     const [devices, setDevices] = useState();
+    const [openScan, setOpenScan] = useState(false);
 
     const handleSartScan = (fun) => {
         codeReader.decodeFromVideoDevice(deviceName, 'video', (result, err) => {
+            setOpenScan(true);
             if (result) {
                 fun({barcode: result.text});
                 codeReader.reset();
+                setOpenScan(false);
             }
             if (err && !(err instanceof NotFoundException)) {
                 fun({err});
@@ -19,9 +22,10 @@ const BarCodeScaner = (props) => {
         })
     };
 
-    // const handleStopScan = () => {
-    //     codeReader.reset()
-    // };
+    const handleStopScan = () => {
+        codeReader.reset();
+        setOpenScan(false);
+    };
 
     useEffect(() => {
         codeReader.getVideoInputDevices()
@@ -52,9 +56,11 @@ const BarCodeScaner = (props) => {
         <>
             <div onClick={() => {
                 props.startAction(handleSartScan)
-            }} className={[barCodeScaner.button, props.class].join(" ")}>{props.nameButton}</div>
+            }} className={[style.button, props.classButton].join(" ")}>{props.nameButton}</div>
+                    <div onClick={handleStopScan} className={[style.bgVideo, openScan || style.hide].join(" ")}></div>
             <video
                 id="video"
+                className={[style.video, props.classVideo].join(" ")}
                 width={props.width || 300}
                 height={props.height || 300}
             ></video>
