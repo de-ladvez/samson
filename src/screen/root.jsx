@@ -14,7 +14,7 @@ import Login from "../components/Login/Login";
 import DefaultLayout from "../layouts/Default"
 import AddMaterial from "./AddMaterrial";
 import ContainerPage from "./Container";
-import FillingContainerBarCodeScaner from "./FillingContainerBarCodeScaner";
+import PackingContainer from "./PackingContainer";
 import {RouteWrapper} from "../util/route";
 
 function ScreensRoot({csvList}) {
@@ -26,7 +26,7 @@ function ScreensRoot({csvList}) {
                     <RouteWrapper path="/sort" component={Starcom} layout={DefaultLayout}/>
                     <RouteWrapper path="/material" component={AddMaterial} layout={DefaultLayout}/>
                     <RouteWrapper path="/container" component={ContainerPage} layout={DefaultLayout}/>
-                    <RouteWrapper path="/fillingcontainer" component={FillingContainerBarCodeScaner} layout={DefaultLayout}/>
+                    <RouteWrapper path="/fillingcontainer" component={PackingContainer} layout={DefaultLayout}/>
 
                     <Route exact path="/chart" component={Chart}/>
                     <Route exact path="/show" component={VueModel} />

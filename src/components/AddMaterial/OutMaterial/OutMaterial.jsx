@@ -158,8 +158,8 @@ const mapDispatchToProps = dispatch => ({
     },
     addMaterial: (obj) => {
         putMaterialRequest(obj)
-            .then(() => {
-                if (!obj._id) return false;
+            .then((res) => {
+                if (!res._id) return false;
                 dispatch(addMaterialAction(obj));
             })
     }
