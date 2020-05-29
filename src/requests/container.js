@@ -4,9 +4,9 @@ const url = (query) => {
     return `http://54.218.54.169:3000/api/${query}`;
 }
 
-export const getMaterialRequest = async (query) => {
+export const getContainerRequest = async (query) => {
     try {
-        return await  axios.get(url("material"), {params: {...query}})
+        return await  axios.get(url("container"), {params: {...query}})
             .then(res => {
                 return res.data;
             })
@@ -15,24 +15,20 @@ export const getMaterialRequest = async (query) => {
     }
 };
 
-export const putMaterialRequest = async (material) => {
+export const putContainerRequest = async (container) => {
     try {
-        return await axios.put(url("material"), material)
+        return await axios.put(url("container"), container)
             .then(res => {
                 return res.data;
             })
-            .catch((e)=>{
-                console.log(e);
-            })
-
     } catch (e) {
         console.error(e);
     }
 };
 
-export const deleteMaterialRequest = async (data) => {
+export const deleteContainerRequest = async (data) => {
     try {
-        return await axios.delete(url(`material`), {data: {id: data}})
+        return await axios.delete(url(`container`), {data: {id: data}})
             .then(res => {
                     return res.data;
             })
