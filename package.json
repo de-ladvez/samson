@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "@zxing/library": "^0.17.0",
     "apexcharts": "3.17.1",
     "aws-sdk": "^2.653.0",
     "axios": "^0.19.2",

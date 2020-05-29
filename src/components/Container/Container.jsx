@@ -1,18 +1,18 @@
 import React, {useState, useEffect} from "react";
-import materialStyle from "./OutMaterial.scss";
+import containerStyle from "./Container.scss";
 import {connect} from 'react-redux';
-import {getMaterialAction, deleteMaterialAction, addMaterialAction} from "../../../action/actionMaterial";
-import {getMaterialRequest, putMaterialRequest, deleteMaterialRequest} from "../../../requests/material";
+import {getContainerAction, addContainerAction, deleteContainerAction} from "../../action/actionContainer";
+import {putContainerRequest, getContainerRequest, deleteContainerRequest} from "../../requests/container";
 
-const OutMaterial = ({getMaterial, deleteMaterial, addMaterial, material}) => {
+const Container = ({getContainer, deleteContainer, addContainer, containers = []}) => {
     useEffect(() => {
-        if (!material.length) {
-            getMaterial();
+        if (!containers.length) {
+            getContainer();
         }
     }, []);
 
     const handleDelete = (id) => {
-        deleteMaterial(id);
+        deleteContainer(id);
     };
 
     const handleAdd = (e) => {
@@ -34,7 +34,7 @@ const OutMaterial = ({getMaterial, deleteMaterial, addMaterial, material}) => {
         const manufacturer = target.manufacturer.value || "";
         const manufacturerdate = target.manufacturerdate.value || "";
         if (barcode && name) {
-            addMaterial({
+            addContainer({
                 barcode,
                 name,
                 description,
@@ -59,7 +59,7 @@ const OutMaterial = ({getMaterial, deleteMaterial, addMaterial, material}) => {
         <>
             <form action="" onSubmit={handleAdd}>
 
-                <table className={materialStyle.table}>
+                <table className={containerStyle.table}>
                     <thead>
                     <tr>
                         <th>barcode</th>
@@ -81,7 +81,7 @@ const OutMaterial = ({getMaterial, deleteMaterial, addMaterial, material}) => {
                     </tr>
                     </thead>
                     <tbody>
-                    {material.map((item, index) => (
+                    {containers.map((item, index) => (
                         <tr key={index}>
                             <td>{item.barcode}</td>
                             <td>{item.name}</td>
@@ -139,28 +139,28 @@ const OutMaterial = ({getMaterial, deleteMaterial, addMaterial, material}) => {
 };
 
 const mapStateToProps = state => ({
-    material: state.material
+    containers: state.containers
 });
 
 const mapDispatchToProps = dispatch => ({
-    getMaterial: () => {
-        getMaterialRequest()
+    getContainer: () => {
+        getContainerRequest()
             .then(res => {
-                dispatch(getMaterialAction(res));
+                dispatch(getContainerAction(res));
             });
     },
-    deleteMaterial: (id) => {
-        deleteMaterialRequest(id)
+    deleteContainer: (id) => {
+        deleteContainerRequest(id)
             .then((res) => {
                 if (!res.deletedCount) return false;
-                dispatch(deleteMaterialAction(id));
+                dispatch(deleteContainerAction(id));
             })
     },
-    addMaterial: (obj) => {
-        putMaterialRequest(obj)
-            .then(() => {
-                if (!obj._id) return false;
-                dispatch(addMaterialAction(obj));
+    addContainer: (obj) => {
+        putContainerRequest(obj)
+            .then((res) => {
+                if (!res._id) return false;
+                dispatch(addContainerAction(obj));
             })
     }
 });
@@ -168,4 +168,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(OutMaterial);
+)(Container);
