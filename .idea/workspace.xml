@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58d7e0d5-60b2-43e6-a183-e512e46d2ebb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/action/actionReservContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reduser/reduserReservContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screen/PackingContainer/OnePart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screen/PackingContainer/TwoPart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screen/PackingContainer/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screen/PackingContainer/index.scss" afterDir="false" />
+    <list default="true" id="58d7e0d5-60b2-43e6-a183-e512e46d2ebb" name="Default" comment="add materials in container">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/actionFilingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/actionFilingContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddMaterial/OutMaterial/OutMaterial.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddMaterial/OutMaterial/OutMaterial.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftPanel/LeftPanel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftPanel/LeftPanel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduser/reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduser/reduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduser/reduserFillingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduser/reduserFillingContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screen/FillingContainerBarCodeScaner.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screen/root.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/root.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BarCodeScaner.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BarCodeScaner.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="59" column="77" lean-forward="true" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
+            <state relative-caret-position="912">
+              <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -60,11 +43,56 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/state.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="56" column="2" lean-forward="true" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1648">
+              <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpackDevServer.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1728">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="704">
+              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -72,16 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnePart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/OnePart.jsx">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="button.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/button/button.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -98,44 +121,8 @@
       <file leaf-file-name="BarCodeScaner.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="592">
               <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reduserFillingContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reduser/reduserFillingContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="9" column="104" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeftPanel.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LeftPanel/LeftPanel.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeftPanel.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LeftPanel/LeftPanel.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reduserReservContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reduser/reduserReservContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -152,7 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>csvList()</find>
       <find>setModel</find>
       <find>model</find>
       <find>handlerRange</find>
@@ -165,7 +151,6 @@
       <find>useStore</find>
       <find>store</find>
       <find>Notification</find>
-      <find>3000</find>
       <find>Access-Control-Allow-Origin</find>
       <find>Access</find>
       <find>DEFAULT_PORT</find>
@@ -182,6 +167,8 @@
       <find>useRef</find>
       <find>bus</find>
       <find>fillingContainers</find>
+      <find>http</find>
+      <find>3000</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Notification/Notification.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/TopBar/TopBar.js" />
         <option value="$PROJECT_DIR$/src/components/Header/Starcom/Table/Table.jsx" />
         <option value="$PROJECT_DIR$/src/screen/Starcom.jsx" />
@@ -229,7 +215,6 @@
         <option value="$PROJECT_DIR$/src/components/ShowModel/ShowModel.jsx" />
         <option value="$PROJECT_DIR$/src/requests/container.js" />
         <option value="$PROJECT_DIR$/src/components/Container/Container.jsx" />
-        <option value="$PROJECT_DIR$/src/store/state.js" />
         <option value="$PROJECT_DIR$/src/components/AddMaterial/OutMaterial/OutMaterial.jsx" />
         <option value="$PROJECT_DIR$/src/requests/material.js" />
         <option value="$PROJECT_DIR$/src/action/actionReservContainer.js" />
@@ -246,6 +231,8 @@
         <option value="$PROJECT_DIR$/src/screen/PackingContainer/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.scss" />
         <option value="$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.jsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/store/state.js" />
       </list>
     </option>
   </component>
@@ -281,6 +268,11 @@
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
               <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="samson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="samson" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="samson" type="b2602c69:ProjectViewProjectNode" />
@@ -486,7 +478,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -521,9 +513,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.eject" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +577,10 @@
       <workItem from="1590655000899" duration="795000" />
       <workItem from="1590656085728" duration="16419000" />
       <workItem from="1590682744136" duration="11845000" />
-      <workItem from="1590745716741" duration="20425000" />
+      <workItem from="1590745716741" duration="22628000" />
+      <workItem from="1590780990413" duration="95000" />
+      <workItem from="1590797138037" duration="601000" />
+      <workItem from="1590826260265" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="create">
       <created>1585590227475</created>
@@ -713,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1590750781675</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add materials in container">
+      <created>1590772156342</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1590772156342</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377475000" />
+    <option name="totallyTimeSpent" value="382734000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -732,9 +734,9 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49932885" visible="true" weight="0.32763532" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49932885" weight="0.32763532" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32763532" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32763532" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.18791947" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database" order="10" />
@@ -750,6 +752,29 @@
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49932885" visible="true" weight="0.32763532" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.18791947" />
+      <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.3261745" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" content_ui="combo" x="24" y="550" width="1490" height="231" id="TODO" order="5" type="FLOATING" weight="0.32905984" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Database" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32763532" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32905984" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info id="Favorites" order="2" sideWeight="0.50073636" side_tool="true" weight="0.3258427" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -774,7 +799,8 @@
     <MESSAGE value="add output materials" />
     <MESSAGE value="fix state" />
     <MESSAGE value="add material + scan bar code" />
-    <option name="LAST_COMMIT_MESSAGE" value="add material + scan bar code" />
+    <MESSAGE value="add materials in container" />
+    <option name="LAST_COMMIT_MESSAGE" value="add materials in container" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -782,13 +808,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Header/TopBar/TopBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screen/Starcom.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -814,13 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="23" column="1" lean-forward="true" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -919,9 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="28" selection-start-line="28" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,9 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,9 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,13 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reduser/reduserMaterial.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -998,9 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="159" column="21" lean-forward="true" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,9 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2176">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,26 +1025,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/TwoPart.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screen/FillingContainerBarCodeScaner.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="113" column="22" lean-forward="true" selection-end-line="187" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screen/FillingContainerBarCodeScaner.jsx" />
     <entry file="file://$PROJECT_DIR$/src/screen/root.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="28" column="86" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,9 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,12 +1092,9 @@
     <entry file="file://$PROJECT_DIR$/src/components/UI/button/button.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/OnePart.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/index.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -1136,8 +1105,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screen/PackingContainer/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="704">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -1146,18 +1115,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="592">
           <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BarCodeScaner/BarCodeScaner.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="59" column="77" lean-forward="true" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
+        <state relative-caret-position="912">
+          <caret line="59" column="77" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1648">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpackDevServer.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="56" column="2" lean-forward="true" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1728">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
