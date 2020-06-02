@@ -3,7 +3,7 @@ import {useStore} from "react-redux";
 import FusionCharts from "fusioncharts";
 import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 import ReactFC from "react-fusioncharts";
-import style from"./Chart.scss";
+import style from"./index.scss";
 
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
