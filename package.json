@@ -11,7 +11,7 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "@zxing/library": "^0.17.0",
-    "apexcharts": "3.17.1",
+    "apexcharts": "3.24.0",
     "axios": "^0.19.2",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
